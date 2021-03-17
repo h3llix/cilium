@@ -196,6 +196,7 @@ Name                                         Labels                             
 ``endpoint_regenerations_total``             ``outcome``                                        Count of all endpoint regenerations that have completed
 ``endpoint_regeneration_time_stats_seconds`` ``scope``                                          Endpoint regeneration time stats
 ``endpoint_state``                           ``state``                                          Count of all endpoints
+`unreachable_health_endpoints``                                                                 Number of health endpoints that cannot be reached
 ============================================ ================================================== ========================================================
 
 Services
@@ -205,6 +206,15 @@ Services
 Name                                       Labels                                             Description
 ========================================== ================================================== ========================================================
 ``services_events_total``                                                                     Number of services events labeled by action type
+========================================== ================================================== ========================================================
+
+Nodes
+~~~~~~~~
+
+========================================== ================================================== ========================================================
+Name                                       Labels                                             Description
+========================================== ================================================== ========================================================
+``unreachable_nodes``                                                                         Number of nodes that cannot be reached
 ========================================== ================================================== ========================================================
 
 Datapath
