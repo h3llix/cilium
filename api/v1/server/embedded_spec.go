@@ -1758,6 +1758,9 @@ func init() {
         "addressing": {
           "$ref": "#/definitions/NodeAddressing"
         },
+        "bpfDir": {
+          "type": "string"
+        },
         "datapathMode": {
           "$ref": "#/definitions/DatapathMode"
         },
@@ -5714,6 +5717,9 @@ func init() {
       "properties": {
         "addressing": {
           "$ref": "#/definitions/NodeAddressing"
+        },
+        "bpfDir": {
+          "type": "string"
         },
         "datapathMode": {
           "$ref": "#/definitions/DatapathMode"

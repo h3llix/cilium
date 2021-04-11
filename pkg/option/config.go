@@ -2352,6 +2352,11 @@ func (c *DaemonConfig) K8sServiceProxyName() string {
 	return c.k8sServiceProxyName
 }
 
+// GetBDFDir retruns the BPF template files directory
+func (c *DaemonConfig) GetBPFDir() string {
+	return c.BpfDir
+}
+
 // CiliumNamespaceName returns the name of the namespace in which Cilium is
 // deployed in
 func (c *DaemonConfig) CiliumNamespaceName() string {

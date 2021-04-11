@@ -25,6 +25,9 @@ type DaemonConfigurationStatus struct {
 	// addressing
 	Addressing *NodeAddressing `json:"addressing,omitempty"`
 
+	// bpf dir
+	BpfDir string `json:"bpfDir,omitempty"`
+
 	// datapath mode
 	DatapathMode DatapathMode `json:"datapathMode,omitempty"`
 

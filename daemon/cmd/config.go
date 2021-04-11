@@ -180,6 +180,7 @@ func (h *getConfig) Handle(params GetConfigParams) middleware.Responder {
 			Type:    option.Config.KVStore,
 			Options: option.Config.KVStoreOpt,
 		},
+		BpfDir:       option.Config.GetBPFDir(),
 		Realized:     spec,
 		DeviceMTU:    int64(d.mtuConfig.GetDeviceMTU()),
 		RouteMTU:     int64(d.mtuConfig.GetRouteMTU()),

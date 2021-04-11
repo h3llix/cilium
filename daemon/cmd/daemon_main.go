@@ -1171,6 +1171,7 @@ func initEnv(cmd *cobra.Command) {
 	option.Config.Opts.SetBool(option.ConntrackAccounting, !option.Config.DisableConntrack)
 	option.Config.Opts.SetBool(option.ConntrackLocal, false)
 	option.Config.Opts.SetBool(option.PolicyAuditMode, option.Config.PolicyAuditMode)
+	option.Config.Opts.SetBool(option.NodePortRange, true)
 
 	monitorAggregationLevel, err := option.ParseMonitorAggregationLevel(option.Config.MonitorAggregation)
 	if err != nil {

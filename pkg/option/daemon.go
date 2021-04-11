@@ -19,10 +19,16 @@ var (
 		Description: "Enable tracing when resolving policy (Debug)",
 	}
 
+	specNodeRangePort = Option{
+		Description: "gsoc test",
+		Immutable:   true,
+	}
+
 	// DaemonOptionLibrary is the daemon's option library that should be
 	// used for read-only.
 	DaemonOptionLibrary = OptionLibrary{
 		PolicyTracing: &specPolicyTracing,
+		NodePortRange: &specNodeRangePort,
 	}
 
 	DaemonMutableOptionLibrary = OptionLibrary{

@@ -75,6 +75,8 @@ func configDaemon(cmd *cobra.Command, opts []string) {
 			}
 			return
 		}
+		// fmt.Printf("%v", cfgStatus.Realized)
+		fmt.Println(cfgStatus.BpfDir)
 		dumpConfig(cfgStatus.Immutable)
 		dumpConfig(cfgStatus.Realized.Options)
 		fmt.Printf("%-24s %s\n", "k8s-configuration", cfgStatus.K8sConfiguration)
