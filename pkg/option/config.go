@@ -2354,6 +2354,7 @@ func (c *DaemonConfig) K8sServiceProxyName() string {
 
 // GetBDFDir retruns the BPF template files directory
 func (c *DaemonConfig) GetBPFDir() string {
+	fmt.Println()
 	return c.BpfDir
 }
 
