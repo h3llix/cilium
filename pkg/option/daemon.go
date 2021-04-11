@@ -19,7 +19,7 @@ var (
 		Description: "Enable tracing when resolving policy (Debug)",
 	}
 
-	specNodeRangePort = Option{
+	specGsocTest = Option{
 		Description: "gsoc test",
 		Immutable:   true,
 	}
@@ -28,7 +28,6 @@ var (
 	// used for read-only.
 	DaemonOptionLibrary = OptionLibrary{
 		PolicyTracing: &specPolicyTracing,
-		NodePortRange: &specNodeRangePort,
 	}
 
 	DaemonMutableOptionLibrary = OptionLibrary{
@@ -45,10 +44,18 @@ var (
 		MonitorAggregation:  &specMonitorAggregation,
 		NAT46:               &specNAT46,
 	}
+
+	DaemonImmutableOptionLibrary = OptionLibrary{
+		GsocTest: &specGsocTest,
+	}
 )
 
 func init() {
 	for k, v := range DaemonMutableOptionLibrary {
+		DaemonOptionLibrary[k] = v
+	}
+
+	for k, v := range DaemonImmutableOptionLibrary {
 		DaemonOptionLibrary[k] = v
 	}
 }

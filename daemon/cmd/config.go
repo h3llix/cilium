@@ -180,6 +180,7 @@ func (h *getConfig) Handle(params GetConfigParams) middleware.Responder {
 			Type:    option.Config.KVStore,
 			Options: option.Config.KVStoreOpt,
 		},
+		Immutable:    *option.Config.Opts.GetImmutableModel(),
 		BpfDir:       "got the response",
 		Realized:     spec,
 		DeviceMTU:    int64(d.mtuConfig.GetDeviceMTU()),

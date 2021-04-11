@@ -37,6 +37,7 @@ const (
 	AlwaysEnforce       = "always"
 	NeverEnforce        = "never"
 	DefaultEnforcement  = "default"
+	GsocTest            = "new_constant"
 )
 
 var (
